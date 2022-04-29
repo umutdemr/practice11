@@ -1,0 +1,33 @@
+<h3 *ngIf="products; else noProduct">{{ title }}</h3>
+
+
+<div class="mb-3">
+  <input
+    class="form-control"
+    id="productName"
+  />
+  <div id="emailHelp" class="form-text">
+  </div>
+</div>
+
+
+
+
+<div class="row">
+  <ng-template #noProduct>
+    <div class="alert alert-primary" role="alert">Bu Katgoride Ürün Yoktur</div>
+  </ng-template>
+  <div *ngFor="let product of products | productFilter:filterText" class="card" style="width: 18rem">
+    <!--For-->
+    <img class="card-img-top" [src]="product.icon" alt="..." />
+    <div class="card-body">
+      <h5 class="card-title">{{ product.name }}</h5>
+      <p class="card-text">
+        {{ product.bundle }}
+      </p>
+      <p class="card-text">
+        {{ product.studio }}
+      </p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,33 @@
+<h3 *ngIf="products; else noProduct">{{title}}</h3><!--Ürün Yok İse-->
+
+<div class="mb-3">
+    <input
+     class="form-control"
+     id="productName"
+     placeholder="Search.."
+     />
+  </div>
+
+<div class="row">
+    <ng-template #noProduct> <!--Ürün Yok ise-->
+        <div class="alert alert-danger" role="alert">
+            Bu Kategoride Ürün Yoktur
+          </div>
+    </ng-template>
+    <div  class="card" style="width: 18rem;">
+        <img [src]="" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"></h5>
+          <p class="card-text">
+            
+          </p>
+          <p class="card-text">
+            
+        </p>
+        </div>
+      </div>
+      
+      
+ 
+
+</div>
